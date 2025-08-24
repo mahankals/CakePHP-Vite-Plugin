@@ -70,7 +70,7 @@ You can install this plugin directly from GitHub using Composer:
 
 4. Install Node packages with Vite Configuration
 
-    __Method 1:  Run with default (npm):__
+    __Method 1: Run with default (npm):__
 
     ```bash
     bin/cake vite-helper install
@@ -92,7 +92,24 @@ Edit `src/View/AppView.php`
     }
 ```
 
-## use Helper
+## Create Resource (example)
+
+Create `resources/js/app.js`
+
+```js
+console.log("Welcome to CakePHP! 🎉");
+```
+
+Create `resources/css/app.css`
+
+```css
+body {
+  background-color: skyblue;
+}
+```
+
+## Use Helper
+
 Either in `templates/layout/default.php` or `templates/**/*.php`
 
 ```php
@@ -101,26 +118,27 @@ Either in `templates/layout/default.php` or `templates/**/*.php`
 
 ## Bundle Assest
 
-1.  Use Vite dev server with live reload:
+__Method 1: Use Vite dev server with live reload:__
 
-    ```bash
-    npm run dev
-    ```
+```bash
+npm run dev
+```
 
-2.  Or for production:
+__Method 2: for production:__
 
-    ```bash
-    npm run build
-    ```
+```bash
+npm run build
+```
 
 ## Extra
+
 ### To get url of resource
 
 ```php
 <?= $this->Vite->url('resources/img/cake.logo.svg') ?>
 ```
 
-ourput of above:
+Result:
 
 1. with `npm run dev'
 
